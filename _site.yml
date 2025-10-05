@@ -19,10 +19,10 @@ navbar:
   right:
     - text: "Contact me"
       icon: fa-envelope-o
-      href: mailto:mark.khurana@sund.ku.dk                    # CHANGE HERE 
+      href: mailto:mark.khurana@sund.ku.dk 
     - text: "GitHub"
       icon: fa-github
-      href: https://github.com/mark-khurana       # CHANGE HERE 
+      href: https://github.com/mark-khurana 
 output:
   html_document:
     theme: cosmo

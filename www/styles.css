@@ -1,0 +1,18 @@
+/* White navbar */
+.navbar {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+/* Navbar text dark */
+.navbar .navbar-brand,
+.navbar .navbar-nav li a {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+/* Navbar hover */
+.navbar .navbar-nav li a:hover {
+  color: #000 !important;
+  background-color: transparent !important;
+}
