@@ -38,7 +38,7 @@
 
 /* Collapsed menu background */
 .navbar-collapse {
-  background-color: #ffffff !important; /* make it white on mobile */
+  background-color: #black !important; /* make it white on mobile */
 }
 
 /* Links inside collapsed menu */
