@@ -22,3 +22,5 @@ kable(
   align = c("c", "l", "l"),
   caption = "Publications from Google Scholar"
 )
+```
+
