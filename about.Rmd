@@ -1,7 +1,10 @@
 ---
-title: "About me"
+title: "About"
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: www/styles.css
 ---
 
-## Header
-
-Say more about you here.
+```{r child='index.Rmd'}
