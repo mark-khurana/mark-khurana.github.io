@@ -2,7 +2,7 @@ name: "Mark P. Khurana"                                # CHANGE HERE
 output_dir: "."
 navbar:
   title: "Mark P. Khurana"                             # CHANGE HERE 
-  type: inverse
+  type: default
   left:
     - text: "Home"
       icon: fa-home
@@ -27,3 +27,4 @@ output:
   html_document:
     theme: cosmo
     highlight: textmate
+    css: www/styles.css
