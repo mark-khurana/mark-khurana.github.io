@@ -11,8 +11,3 @@
   font-weight: 500;
 }
 
-/* Navbar hover */
-.navbar .navbar-nav li a:hover {
-  color: #000 !important;
-  background-color: transparent !important;
-}
