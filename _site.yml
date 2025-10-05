@@ -1,8 +1,8 @@
-name: "Mark P. Khurana"                                # CHANGE HERE 
+name: "Mark P. Khurana"                                 
 output_dir: "."
 site_url: "https://mark-khurana.github.io/"
 navbar:
-  title: "Mark P. Khurana"                             # CHANGE HERE 
+  title: "Mark P. Khurana"                             
   type: default
   left:
     - text: "About"
