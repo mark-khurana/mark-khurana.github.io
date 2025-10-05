@@ -11,6 +11,7 @@ output:
 <div style="text-align:center; margin-bottom:40px;">
   <img src="www/picture.png" alt="Mark P. Khurana, MD MSc" style="width:150px; height:150px; border-radius:50%; margin-bottom:20px;"/>
   <h1 style="margin:0; font-size:3em;">Mark P. Khurana, MD MSc</h1>
+  <h2 style="margin:0; font-size:1.5em;">MD MSc</h2>
   <h3 style="margin:5px 0 0 0; font-weight:normal; font-size:1.5em;">Research Fellow, University of Copenhagen</h3>
 </div>
 
