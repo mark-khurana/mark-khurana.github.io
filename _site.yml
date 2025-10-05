@@ -9,8 +9,11 @@ navbar:
       icon: fa-user 
       href: about.html
     - text: "Publications"
-      icon: 
+      icon: fa-file
       href: publications.html
+    - text: "Projects"
+      icon: fa-file-text
+      href: projects.html
     - text: "CV"
       icon: fa-file-pdf-o
       href: cv.html
