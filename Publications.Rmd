@@ -11,31 +11,39 @@ output:
 
 The list below is automatically pulled from my Google Scholar profile:
 
-```{r setup, include=FALSE}
+```{r publications, echo=FALSE}
+# Load libraries
 library(scholar)
 library(knitr)
 library(dplyr)
+library(kableExtra)
 
+# Google Scholar ID
 my_id <- "gQg4gOcAAAAJ"
+
+# Fetch publications
 my_pubs <- get_publications(my_id) %>% arrange(desc(year))
 
 # Ensure pub_url exists
 if(!"pub_url" %in% colnames(my_pubs)) my_pubs$pub_url <- NA_character_
 
-# Create clickable titles safely
+# Create clickable titles
 my_pubs$title_link <- ifelse(
   !is.na(my_pubs$pub_url) & my_pubs$pub_url != "",
   paste0("<a href='", my_pubs$pub_url, "' target='_blank'>", my_pubs$title, "</a>"),
   as.character(my_pubs$title)
 )
 
-# If DOI column does not exist, create an empty one
+# Ensure DOI column exists
 if(!"doi" %in% colnames(my_pubs)) my_pubs$doi <- ""
-# Display table with Year, Title (clickable), Journal, DOI
+
+# Display table
 kable(
   my_pubs[, c("year", "title_link", "journal", "doi")],
   col.names = c("Year", "Title", "Journal", "DOI"),
   align = c("c", "l", "l", "c"),
   escape = FALSE,
+  format = "html",
   caption = "Publications from Google Scholar"
-)
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
