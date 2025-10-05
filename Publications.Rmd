@@ -1,5 +1,34 @@
 ---
 title: "Publications"
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: www/styles.css
 ---
 
-Say more about you here.
+## Publications
+
+The list below is automatically pulled from my Google Scholar profile:
+
+```{r setup, include=FALSE}
+# Load necessary libraries
+library(scholar)
+library(knitr)
+
+# Google Scholar ID
+my_id <- "gQg4gOcAAAAJ"
+
+# Fetch publications
+my_pubs <- get_publications(my_id)
+
+# Sort by year descending
+my_pubs <- my_pubs[order(-my_pubs$year), ]
+
+# Display table nicely
+kable(
+  my_pubs[, c("year", "title", "journal")],
+  col.names = c("Year", "Title", "Journal"),
+  align = c("c", "l", "l"),
+  caption = "Publications from Google Scholar"
+)
