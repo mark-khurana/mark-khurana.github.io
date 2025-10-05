@@ -7,11 +7,9 @@ output:
     css: www/styles.css
 ---
 
-## Publications
+Link to [Google Scholar](https://scholar.google.com/citations?user=gQg4gOcAAAAJ)
 
-The list below is automatically pulled from my Google Scholar profile:
-
-```{r publications, echo=FALSE}
+```{r publications, echo=FALSE, message=FALSE, warning=FALSE}
 # Load libraries
 library(scholar)
 library(knitr)
@@ -21,29 +19,32 @@ library(kableExtra)
 # Google Scholar ID
 my_id <- "gQg4gOcAAAAJ"
 
-# Fetch publications
+# Fetch publications and sort by year descending
 my_pubs <- get_publications(my_id) %>% arrange(desc(year))
 
 # Ensure pub_url exists
 if(!"pub_url" %in% colnames(my_pubs)) my_pubs$pub_url <- NA_character_
 
-# Create clickable titles
+# Create clickable titles if pub_url exists
 my_pubs$title_link <- ifelse(
   !is.na(my_pubs$pub_url) & my_pubs$pub_url != "",
   paste0("<a href='", my_pubs$pub_url, "' target='_blank'>", my_pubs$title, "</a>"),
   as.character(my_pubs$title)
 )
 
-# Ensure DOI column exists
-if(!"doi" %in% colnames(my_pubs)) my_pubs$doi <- ""
+# Create Citations column from 'cites'
+my_pubs$Citations <- my_pubs$cites
 
-# Display table
+# Display table with Year, Title (clickable), Journal, Citations
 kable(
-  my_pubs[, c("year", "title_link", "journal", "doi")],
-  col.names = c("Year", "Title", "Journal", "DOI"),
+  my_pubs[, c("year", "title_link", "journal", "Citations")],
+  col.names = c("Year", "Title", "Journal", "Citations"),
   align = c("c", "l", "l", "c"),
   escape = FALSE,
   format = "html",
   caption = "Publications from Google Scholar"
 ) %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed")
+  )
