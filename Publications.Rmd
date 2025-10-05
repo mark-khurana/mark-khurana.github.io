@@ -33,13 +33,13 @@ my_pubs$title_link <- ifelse(
 )
 
 # Create Citations column from 'cites'
-my_pubs$Citations <- my_pubs$cites
+#my_pubs$Citations <- my_pubs$cites
 
 # Display table with Year, Title, Authors, Journal, Citations
 kable(
-  my_pubs[, c("year", "title_link", "author", "journal", "Citations")],
-  col.names = c("Year", "Title", "Authors", "Journal", "Citations"),
-  align = c("c", "l", "l", "l", "c"),
+  my_pubs[, c("year", "title_link", "author", "journal")],
+  col.names = c("Year", "Title", "Authors", "Journal"),
+  align = c("c", "l", "l", "l"),
   escape = FALSE,
   format = "html",
   caption = "Publications from Google Scholar"
