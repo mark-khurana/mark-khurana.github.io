@@ -15,11 +15,10 @@ library(knitr)
 my_id <- "gQg4gOcAAAAJ"
 my_pubs <- get_publications(my_id)
 my_pubs <- my_pubs[order(-my_pubs$year), ]
-```
+# Display the publications table
 kable(
   my_pubs[, c("year", "title", "journal")],
   col.names = c("Year", "Title", "Journal"),
   align = c("c", "l", "l"),
   caption = "Publications from Google Scholar"
 )
-

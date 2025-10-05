@@ -8,7 +8,7 @@ navbar:
       icon: fa-user 
       href: about.html
     - text: "Publications"
-      icon: fa-file-pdf-o
+      icon: 
       href: publications.html
     - text: "CV"
       icon: fa-file-pdf-o
