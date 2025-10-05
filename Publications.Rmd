@@ -1,5 +1,6 @@
 ---
 title: "Publications"
+pagetitle: "MP Khurana"
 output:
   html_document:
     theme: cosmo

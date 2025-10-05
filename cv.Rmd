@@ -1,5 +1,7 @@
 ---
 title: "CV"
+pagetitle: "MP Khurana"
+
 ---
 
 <a href="CV.pdf#" class="download" title="Download CV as PDF">Download CV</a>			
