@@ -4,4 +4,4 @@ pagetitle: "MP Khurana"
 
 ---
 
-<a href="CV.pdf#" class="download" title="Download CV as PDF">Download CV</a>			
+<a href="CV.pdf#" class="download" title="Coming soon!">Download CV</a>			
